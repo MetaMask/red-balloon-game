@@ -1,0 +1,30 @@
+{
+  "name": "@rb/contracts",
+  "version": "0.1.0",
+  "description": "Red Balloon Contracts",
+  "scripts": {
+    "chain:start": "docker compose --env-file ./../../.env up -d",
+    "chain:stop": "docker compose --env-file ./../../.env down",
+    "deploy": "hardhat deploy --write true",
+    "seed": "bun run deploy"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^5.0.2"
+  },
+  "devDependencies": {
+    "@codefi/delegator-core-viem": "^0.2.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.9",
+    "@nomicfoundation/hardhat-viem": "^2.0.3",
+    "@types/bun": "latest",
+    "dotenv": "^16.4.5",
+    "hardhat": "^2.22.8",
+    "hardhat-deploy": "^0.12.4",
+    "ts-node": "^10.9.2"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0",
+    "viem": "^2.18.2"
+  },
+  "author": "",
+  "license": "ISC"
+}

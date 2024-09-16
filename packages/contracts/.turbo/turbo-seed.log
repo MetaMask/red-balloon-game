@@ -1,0 +1,87 @@
+
+[0m[2m[35m$[0m [2m[1mbun run deploy[0m
+[0m[2m[35m$[0m [2m[1mhardhat deploy --write true[0m
+Nothing to compile
+Env: {
+  DelegationManager: [32m'0xbe4138886cb096bdc1b930f2f0ca7892aa234d78'[39m,
+  EntryPoint: [32m'0x0000000071727De22E5E9d8BAf0edAc6f37da032'[39m,
+  SimpleFactory: [32m'0x6ff518884f21168c30c58CB21184D6AdBC18Ad90'[39m,
+  implementations: {
+    MultiSigDeleGatorImpl: [32m'0x11f555af5844d85bfcf5d61d2a22866527eb585a'[39m,
+    HybridDeleGatorImpl: [32m'0x5989F5D13DF8fc818EdA65e417AED90459fD67F7'[39m
+  },
+  caveatEnforcers: {
+    AllowedCalldataEnforcer: [32m'0x48db3835a873d64a4af2c09f014052407c003bd7'[39m,
+    AllowedMethodsEnforcer: [32m'0xfd731951bf1c52afccee3e6f14ab656475b76dd4'[39m,
+    AllowedTargetsEnforcer: [32m'0xbc8673c0afa52d86d991c06881e55b2966920564'[39m,
+    ArgsEqualityCheckEnforcer: [90mundefined[39m,
+    BlockNumberEnforcer: [32m'0xc15faffa0d879b9263c15a46ce31eacfa2e0e8ae'[39m,
+    DeployedEnforcer: [32m'0x5accb9559b56a6c1e3f90e342c85c42d93720d43'[39m,
+    ERC20BalanceGteEnforcer: [32m'0xb5d6b1ec6d868a3bae5b7f48178eaa2686a7a087'[39m,
+    ERC20TransferAmountEnforcer: [32m'0x92ac423b9c111962179a6242e1adb58d02c103be'[39m,
+    IdEnforcer: [32m'0x34152d9f3f8f74338d50703e780389e829b4abac'[39m,
+    LimitedCallsEnforcer: [32m'0x4b3adad4a328bee8ba17b86074d92fe7372180cd'[39m,
+    NonceEnforcer: [32m'0x2f32ff3fc3086d7f63f16fe8d0065390d460b40d'[39m,
+    TimestampEnforcer: [32m'0x78e05f779490c24bf3bfa135b4112e7003b321cd'[39m,
+    ValueLteEnforcer: [32m'0xfc20ede0a1132e839fbda9d7ed3904ff3c89540f'[39m,
+    NativeTokenTransferAmountEnforcer: [90mundefined[39m,
+    NativeBalanceGteEnforcer: [90mundefined[39m,
+    NativeTokenPaymentEnforcer: [90mundefined[39m,
+    RedeemerEnforcer: [90mundefined[39m
+  }
+}
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon0" at 0x6C91613F058a17624AACb121A1dA002a597baa11
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon1" at 0xE83bEcEcAf67c7ba27E657233333171cE68046d7
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon2" at 0x5B9317cdaCFB9c35583807254eb2DB2190c42C94
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon3" at 0xF3207342Afa6F6949c32a65d21d00Baf4b4c2A0B
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon4" at 0xE6F2a1bE9A6D65CB98f8CcE2f21EFBd9F08CEbF1
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon5" at 0x361e262BfF68E41313fEd289F953d0405a596d0d
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon6" at 0xFe1aaa7a48b747e57C78042AB971C958A0F5D358
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon7" at 0xab343b0252637652A7662Fad23cE1bF1B9d85e50
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon8" at 0xfE1D106795E68870E1Fff08C6D53a3D77fb09eDE
+Chain: Sepolia (11155111)
+Transport: http://127.0.0.1:8545
+Signatory: 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266
+reusing "RedBalloon9" at 0xc3D9ae32110402E78fCF0b2fA3D376A68Cfc97d1
+reusing "TreasureHunt" at 0x030222B6b87e18b1fdF90CE8Ae313a2fDAF59629
+Treasure Balloons: [
+  [32m'0x6C91613F058a17624AACb121A1dA002a597baa11'[39m,
+  [32m'0xE83bEcEcAf67c7ba27E657233333171cE68046d7'[39m,
+  [32m'0x5B9317cdaCFB9c35583807254eb2DB2190c42C94'[39m,
+  [32m'0xF3207342Afa6F6949c32a65d21d00Baf4b4c2A0B'[39m,
+  [32m'0xE6F2a1bE9A6D65CB98f8CcE2f21EFBd9F08CEbF1'[39m,
+  [32m'0x361e262BfF68E41313fEd289F953d0405a596d0d'[39m,
+  [32m'0xFe1aaa7a48b747e57C78042AB971C958A0F5D358'[39m,
+  [32m'0xab343b0252637652A7662Fad23cE1bF1B9d85e50'[39m,
+  [32m'0xfE1D106795E68870E1Fff08C6D53a3D77fb09eDE'[39m,
+  [32m'0xc3D9ae32110402E78fCF0b2fA3D376A68Cfc97d1'[39m
+]
+Treasure Balance: [33m5000000000000000000n[39m
+📝 Updated TypeScript contract definition file on ../../apps/web/src/contracts/deployedContracts.ts

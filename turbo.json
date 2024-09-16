@@ -1,0 +1,87 @@
+{
+  "$schema": "https://turbo.build/schema.json",
+  "ui": "tui",
+  "tasks": {
+    "build": {
+      "dependsOn": [
+        "^build"
+      ],
+      "inputs": [
+        "$TURBO_DEFAULT$",
+        ".env*"
+      ],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**"
+      ]
+    },
+    "lint": {
+      "dependsOn": [
+        "^lint"
+      ]
+    },
+    "dev": {
+      "cache": false,
+      "persistent": true
+    },
+    "db:start": {
+      "dependsOn": [
+        "^db:start"
+      ],
+      "cache": false
+    },
+    "db:stop": {
+      "dependsOn": [
+        "^db:stop"
+      ],
+      "cache": false
+    },
+    "db:push": {
+      "dependsOn": [
+        "^db:push"
+      ],
+      "cache": false
+    },
+    "db:studio": {
+      "dependsOn": [
+        "^db:studio"
+      ],
+      "persistent": true
+    },
+    "seed": {
+      "dependsOn": [
+        "^seed"
+      ],
+      "cache": false
+    },
+    "@rb/web#seed": {
+      "dependsOn": [
+        "db:push",
+        "@rb/contracts#seed",
+        "^seed"
+      ],
+      "cache": false
+    }
+  },
+  "globalEnv": [
+    "ADMIN_PASSWORD",
+    "BALLOON_COUNT",
+    "DATABASE_URL",
+    "DEPLOYER_PRIVATE_KEY",
+    "ETHERSCAN_API_KEY",
+    "INFURA_API_KEY",
+    "NEXT_PUBLIC_BUNDLER_URL",
+    "NEXT_PUBLIC_CHAIN_ID",
+    "NEXT_PUBLIC_CHAIN_URL",
+    "NEXT_PUBLIC_PAYMASTER_URL",
+    "PRIZE_ETH"
+  ],
+  "globalPassThroughEnv": [
+    "NODE_ENV",
+    "CI",
+    "VERCEL",
+    "VERCEL_ENV",
+    "VERCEL_URL",
+    "npm_lifecycle_event"
+  ]
+}

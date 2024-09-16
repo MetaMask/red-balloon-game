@@ -1,0 +1,2 @@
+[install.scopes]
+"@codefi" = { token = "<your_codefi_npm_token>", url = "https://nexus.eu-west-3.codefi.network/repository/npm-hosted/" }

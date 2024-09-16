@@ -1,0 +1,12 @@
+[0m[2m[35m$[0m [2m[1mbun with-env drizzle-kit studio[0m
+[0m[2m[35m$[0m [2m[1mdotenv -e ../../.env -- drizzle-kit studio[0m
+[90mdrizzle-kit: v0.21.4[39m
+[90mdrizzle-orm: v0.30.10[39m
+
+[90mNo config path provided, using default path[39m
+[90mReading config file '/Users/ltanica/git/metamask/demo-red-balloon/apps/web/drizzle.config.ts'[39m
+[90mUsing 'postgres' driver for database querying[39m
+
+[30m[43m[Warning][49m[39m [1mDrizzle Studio is currently in Beta. If you find anything that is not working as expected or should be improved, feel free to create an issue on GitHub: https://github.com/drizzle-team/drizzle-kit-mirror/issues/new or write to us on Discord: https://discord.gg/WcRKz2FFxN[22m
+
+Drizzle Studio is up and running on [34mhttps://local.drizzle.studio[39m

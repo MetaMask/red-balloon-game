@@ -1,0 +1,37 @@
+{
+  "name": "red-balloon",
+  "private": true,
+  "scripts": {
+    "build": "turbo build",
+    "chain:start": "docker compose -f packages/contracts/docker-compose.yml --env-file ./.env up -d",
+    "chain:stop": "docker compose -f packages/contracts/docker-compose.yml --env-file ./.env down",
+    "db:push": "turbo db:push",
+    "db:start": "turbo db:start",
+    "db:stop": "turbo db:stop",
+    "db:studio": "turbo db:studio",
+    "dev": "turbo dev",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "lint": "turbo lint",
+    "seed": "turbo seed"
+  },
+  "devDependencies": {
+    "prettier": "^3.3.2",
+    "turbo": "^2.1.1",
+    "typescript": "^5.5.3"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "packageManager": "bun@1.1.27",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "trustedDependencies": [
+    "@interacta/css-labels",
+    "es5-ext",
+    "esbuild",
+    "keccak",
+    "secp256k1"
+  ]
+}
