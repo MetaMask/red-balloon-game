@@ -15,10 +15,6 @@ const deployerPrivateKey =
   process.env.DEPLOYER_PRIVATE_KEY ??
   "0xac0974bec39a17e36ba4a6b4d238ff944bacb478cbed5efcae784d7bf4f2ff80";
 
-// If not set, it uses a default Etherscan API key.
-const etherscanApiKey =
-  process.env.ETHERSCAN_API_KEY || "JIWUXP49VSWVFG6QUKF8XXUVBP2NYINNX7";
-
 const config: HardhatUserConfig = {
   solidity: {
     version: "0.8.23",
@@ -77,12 +73,12 @@ const config: HardhatUserConfig = {
   },
   // configuration for harhdat-verify plugin
   etherscan: {
-    apiKey: `${etherscanApiKey}`,
+    apiKey: `${process.env.ETHERSCAN_API_KEY}`,
   },
   // configuration for etherscan-verify from hardhat-deploy plugin
   verify: {
     etherscan: {
-      apiKey: `${etherscanApiKey}`,
+      apiKey: `${process.env.ETHERSCAN_API_KEY}`,
     },
   },
   sourcify: {
