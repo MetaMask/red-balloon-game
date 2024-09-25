@@ -13,7 +13,6 @@ export const env = createEnv({
       .default("development"),
     ADMIN_PASSWORD: z.string().min(3),
     DATABASE_URL: z.string().url(),
-    DEPLOYER_PRIVATE_KEY: z.custom<`0x${string}`>(),
   },
 
   /**
@@ -23,8 +22,7 @@ export const env = createEnv({
    */
   client: {
     NEXT_PUBLIC_BUNDLER_URL: z.string().url(),
-    NEXT_PUBLIC_CHAIN_ID: chainIdSchema.default(31337),
-    NEXT_PUBLIC_CHAIN_URL: z.string().url().default("http://127.0.0.1:8545"),
+    NEXT_PUBLIC_CHAIN_ID: chainIdSchema,
     NEXT_PUBLIC_PAYMASTER_URL: z.string().url(),
   },
 
@@ -36,10 +34,8 @@ export const env = createEnv({
     NODE_ENV: process.env.NODE_ENV,
     ADMIN_PASSWORD: process.env.ADMIN_PASSWORD,
     DATABASE_URL: process.env.DATABASE_URL,
-    DEPLOYER_PRIVATE_KEY: process.env.DEPLOYER_PRIVATE_KEY,
     NEXT_PUBLIC_BUNDLER_URL: process.env.NEXT_PUBLIC_BUNDLER_URL,
     NEXT_PUBLIC_CHAIN_ID: Number(process.env.NEXT_PUBLIC_CHAIN_ID),
-    NEXT_PUBLIC_CHAIN_URL: process.env.NEXT_PUBLIC_CHAIN_URL,
     NEXT_PUBLIC_PAYMASTER_URL: process.env.NEXT_PUBLIC_PAYMASTER_URL,
   },
   /**

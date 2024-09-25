@@ -404,7 +404,6 @@ const getDelegatorClientFromPk = (pk: Hex) => {
   const account = privateKeyToAccount(pk);
   const chain = CHAIN;
   return createDeleGatorClient({
-    transport: http(env.NEXT_PUBLIC_CHAIN_URL),
     chain,
     account: {
       implementation: Implementation.Hybrid,

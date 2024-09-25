@@ -18,10 +18,14 @@ import {
   createDeleGatorClient,
   getDelegationHashOffchain,
 } from "@codefi/delegator-core-viem";
-import { type Hex, createPublicClient, http } from "viem";
+import { type Hex, createPublicClient } from "viem";
 import { generatePrivateKey, privateKeyToAccount } from "viem/accounts";
-import { env } from "@/env";
 import { getDelegatorEnv } from "@/lib/delegator";
+
+if (!process.env.DEPLOYER_PRIVATE_KEY || !(/0x[0-9a-fA-F]+/.test(process.env.DEPLOYER_PRIVATE_KEY))) {
+  throw new Error("DEPLOYER_PRIVATE_KEY is not set or is invalid");
+}
+const DEPLOYER_PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY as `0x${string}`;
 
 const clearTables = async () => {
   /* eslint-disable drizzle/enforce-delete-with-where */
@@ -38,10 +42,9 @@ const clearTables = async () => {
 async function createInitialBalloonDelegation(
   balloonContract: GenericContract,
 ): Promise<{ delegation: DelegationStruct; pk: Hex }> {
-  const signatory = privateKeyToAccount(env.DEPLOYER_PRIVATE_KEY);
+  const signatory = privateKeyToAccount(DEPLOYER_PRIVATE_KEY);
   const publicClient = createPublicClient({
     chain: CHAIN,
-    transport: http(env.NEXT_PUBLIC_CHAIN_URL),
   });
   const ownerGatorAddress = (await publicClient.readContract({
     address: balloonContract.address,
@@ -51,7 +54,6 @@ async function createInitialBalloonDelegation(
 
   const ownerGator = createDeleGatorClient({
     chain: CHAIN,
-    transport: http(env.NEXT_PUBLIC_CHAIN_URL),
     account: {
       implementation: Implementation.Hybrid,
       isAccountDeployed: true,
@@ -93,7 +95,7 @@ const createInitialDelegations = () => {
 
 export const seed = async () => {
   await clearTables();
-  const deployerPk = env.DEPLOYER_PRIVATE_KEY;
+  const deployerPk = DEPLOYER_PRIVATE_KEY;
   const balloonIds = generateUuids(BALLOON_COUNT);
 
   const signedDelegations = await createInitialDelegations();
