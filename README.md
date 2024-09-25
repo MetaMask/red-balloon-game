@@ -115,7 +115,7 @@ bun deploy --network <network_name>
 - The contracts addresses for `<network_name>` will be populated in the `apps/web/src/contracts/deployedContracts.ts` file.
 
 > [!NOTE]
-> Make sure the `NEXT_PUBLIC_CHAIN_ID` and `NEXT_PUBLIC_CHAIN_URL` values in the `.env` file match the network you are deploying to.
+> Make sure the `NEXT_PUBLIC_CHAIN_ID` value in the `.env` file match the network you are deploying to.
 
 #### 3. Seed database
 
